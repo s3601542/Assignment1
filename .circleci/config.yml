@@ -16,7 +16,12 @@ jobs: # List of jobs
     steps: # Listing steps
       - checkout
       - install_deps # Calling upon command called 'install_deps'
-         
+      - run:
+          name: Test Unit
+          command: |
+            cd src
+            npm run test-unit
+
 
 workflows:
   version: 2
