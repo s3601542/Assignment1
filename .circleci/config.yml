@@ -16,9 +16,9 @@ jobs: # List of jobs
     steps: # Listing steps
       - checkout
       - install_deps # Calling upon command called 'install_deps'
-      - run:
+      - run: # Running(19) commands(21), named 'Test Unit'(20)
           name: Test Unit
-          command: |
+          command: | # Change directory to 'src', npm will run script 'test-unit' from 'package.json'
             cd src
             npm run test-unit
 
