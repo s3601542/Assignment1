@@ -21,6 +21,11 @@ jobs: # List of jobs
           command: | # Change directory to 'src', npm will run script 'test-unit' from 'package.json'
             cd src
             npm run test-unit
+      - run: # Running(24) commands(26), named 'Lint'(25)
+          name: Test Lint
+          command: | # Change directory to 'src', npm will run script 'test-lint' from 'package.json'
+            cd src
+            npm run test-lint
 
 
 workflows:
